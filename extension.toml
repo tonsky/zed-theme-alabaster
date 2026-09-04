@@ -1,0 +1,7 @@
+id = "alabaster"
+name = "Alabaster"
+version = "0.1.0"
+schema_version = 1
+authors = ["Nikitonsky"]
+description = ""
+repository = "https://github.com/tonsky/zed-theme-alabaster"
