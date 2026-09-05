@@ -1,0 +1,272 @@
+:root {
+  --name: "Alabaster Light";
+  --appearance: "light";
+  
+  --text-fg: #000000;
+  --text-bg: #FFFFFF;
+
+  --yellow-fg: #6e6600;
+  --yellow-bg: #fffab4;
+
+  --orange-bg: #ffb846;
+  --orange-accent: #f08c02;
+
+  --brown-fg: #a47501;
+  --brown-accent: var(--brown-fg);
+  --brown-bg: #faf2e6;
+  
+  --green-fg: #315d00;
+  --green-accent: #4d9527;
+  --green-bg: #ebfcd6;
+  --green-bg-dark: #d7edb0;
+  
+  --purple-fg: #9538bb;
+  --purple-accent: #984ea5;
+
+  --grey-fg: #a0a0a0;
+  --grey-bg: #00000008;
+
+  --blue-fg: #005d7f;
+  --blue-accent: #016ccc;
+  --blue-bg: #d6f2ff;
+  
+  --red-fg: #dd3f2e;
+  --red-accent: var(--red-fg);
+  --red-bg: #ffe2dc;
+}  
+
+style {
+  .border { color: #c9c9caff; }
+  .border .variant { color: #dfdfe0ff; }
+  .border .focused { color: var(--blue-accent); }
+  .border .selected { color: var(--blue-bg); }
+  .border .transparent { color: #00000000; }
+  .border .disabled { color: #d3d3d4ff; }
+  .elevated_surface .background { color: #ebebecff; }
+  .surface .background { color: #ebebecff; }
+  .background { color: #DCDCDDFF; }
+  .element .background { color: #ebebecff; }
+  .element .hover { color: #dfdfe0ff; }
+  .element .active { color: #cacacaff; }
+  .element .selected { color: #cacacaff; }
+  .element .disabled { color: #ebebecff; }
+  .drop_target .background { color: #7e808780; }
+  .ghost_element .background { color: #00000000; }
+  .ghost_element .hover { color: #dfdfe0ff; }
+  .ghost_element .active { color: #cacacaff; }
+  .ghost_element .selected { color: #cacacaff; }
+  .ghost_element .disabled { color: #ebebecff; }
+  .text { color: var(--text-fg); }
+  .text .muted { color: #58585aff; }
+  .text .placeholder { color: #7e8086ff; }
+  .text .disabled { color: #7e8086ff; }
+  .text .accent { color: var(--blue-accent); }
+  .icon { color: #242529ff; }
+  .icon .muted { color: #58585aff; }
+  .icon .disabled { color: #7e8086ff; }
+  .icon .placeholder { color: #58585aff; }
+  .icon .accent { color: var(--blue-accent); }
+  .status_bar .background { color: #DCDCDDFF; }
+  .title_bar .background { color: #DCDCDDFF; }
+  .title_bar .inactive_background { color: #ebebecff; }
+  .toolbar .background { color: #fafafaff; }
+  .tab_bar .background { color: #ebebecff; }
+  .tab .inactive_background { color: #ebebecff; }
+  .tab .active_background { color: #fafafaff; }
+  .search .match_background { color: var(--orange-bg); }
+  .search .active_match_background { color: var(--orange-bg); }
+  .panel .background { color: #ebebecff; }
+  .panel .focused_border { color: #7d82e8ff; }
+  .pane .focused_border { color: #7d82e8ff; }
+  .scrollbar .thumb .background { color: #383a414c; }
+  .scrollbar .thumb .hover_background { color: #dfdfe0ff; }
+  .scrollbar .thumb .border { color: #dfdfe0ff; }
+  .scrollbar .track .background { color: #00000000; }
+  .scrollbar .track .border { color: #eeeeeeff; }
+  .editor .foreground { color: var(--text-fg); }
+  .editor .background { color: var(--text-bg); }
+  .editor .gutter .background { color: var(--text-bg); }
+  .editor .subheader .background { color: #ebebecff; }
+  .editor .active_line .background { color: #ebebecbf; }
+  .editor .highlighted_line .background { color: #ebebecff; }
+  .editor .line_number { color: var(--grey-fg); }
+  .editor .active_line_number { color: var(--text-fg); }
+  .editor .hover_line_number { color: #61616b; }
+  .editor .invisible { color: #b4b4bb; }
+  .editor .wrap_guide { color: #383a410d; }
+  .editor .active_wrap_guide { color: #383a411a; }
+  .editor .document_highlight .read_background { color: #00000010; }
+  .editor .document_highlight .write_background { color: #a3a3a466; }
+  .terminal .background { color: var(--text-bg); }
+  .terminal .foreground { color: var(--text-fg); }
+  .terminal .bright_foreground { color: #2a2c33ff; }
+  .terminal .dim_foreground { color: #bbbbbbff; }
+  .terminal .ansi .black { color: #000000ff; }
+  .terminal .ansi .bright_black { color: #000000ff; }
+  .terminal .ansi .dim_black { color: #555555ff; }
+  .terminal .ansi .red { color: #de3e35ff; }
+  .terminal .ansi .bright_red { color: #de3e35ff; }
+  .terminal .ansi .dim_red { color: #9c2b26ff; }
+  .terminal .ansi .green { color: #3f953aff; }
+  .terminal .ansi .bright_green { color: #3f953aff; }
+  .terminal .ansi .dim_green { color: #2b6927ff; }
+  .terminal .ansi .yellow { color: #d2b67cff; }
+  .terminal .ansi .bright_yellow { color: #d2b67cff; }
+  .terminal .ansi .dim_yellow { color: #a48c5aff; }
+  .terminal .ansi .blue { color: #2f5af3ff; }
+  .terminal .ansi .bright_blue { color: #2f5af3ff; }
+  .terminal .ansi .dim_blue { color: #2140abff; }
+  .terminal .ansi .magenta { color: #950095ff; }
+  .terminal .ansi .bright_magenta { color: #a00095ff; }
+  .terminal .ansi .dim_magenta { color: #6a006aff; }
+  .terminal .ansi .cyan { color: #0997b3ff; }
+  .terminal .ansi .bright_cyan { color: #0bbcd6ff; }
+  .terminal .ansi .dim_cyan { color: #0a7b92ff; }
+  .terminal .ansi .white { color: #bbbbbbff; }
+  .terminal .ansi .bright_white { color: #ffffffff; }
+  .terminal .ansi .dim_white { color: #888888ff; }
+  .link_text .hover { color: #016ccc; }
+  
+  .version_control .added { color: var(--green-accent); }
+  .version_control .modified { color: var(--brown-accent); }
+  .version_control .word_added { color: color-mix(in oklch, var(--green-accent) 50%, var(--text-bg)); }
+  .version_control .word_deleted { color: color-mix(in oklch, var(--red-accent) 50%, var(--text-bg)); }
+  .version_control .deleted { color: var(--red-accent); }
+  .version_control .renamed { color: var(--blue-accent); }
+  .version_control .conflict { color: var(--brown-accent); }
+  .version_control .ignored { color: #7e8086ff; }
+
+  .created { color: var(--green-accent); }
+  .created .background { color: var(--green-bg); }
+  .created .border { color: var(--green-accent); }
+
+  .modified { color: var(--brown-accent); }
+  .modified .background { color: var(--brown-bg); }
+  .modified .border { color: var(--brown-accent); }
+  
+  .deleted { color: var(--red-accent); }
+  .deleted .background { color: var(--red-bg); }
+  .deleted .border { color: var(--red-accent); }
+
+  .renamed { color: var(--blue-accent); }
+  .renamed .background { color: var(--blue-bg); }
+  .renamed .border { color: var(--blue-accent); }
+
+  .conflict { color: var(--brown-accent); }
+  .conflict .background { color: var(--brown-bg); }
+  .conflict .border { color: var(--brown-accent); }
+
+  .ignored { color: #7e8086ff; }
+  .ignored .background { color: #dcdcddff; }
+  .ignored .border { color: #c9c9caff; }
+
+  .error { color: var(--red-accent); }
+  .error .background { color: var(--red-bg); }
+  .error .border { color: var(--red-accent); }
+  
+  .hidden { color: #7e8086ff; }
+  .hidden .background { color: #dcdcddff; }
+  .hidden .border { color: #d3d3d4ff; }
+  
+  .hint { color: var(--blue-accent); }
+  .hint .background { color: var(--blue-bg); }
+  .hint .border { color: var(--blue-accent); }
+  
+  .info { color: var(--blue-accent); }
+  .info .background { color: var(--blue-bg); }
+  .info .border { color: var(--blue-accent); }
+  
+  .predictive { color: #9b9ec6ff; }
+  .predictive .background { color: #dfeadbff; }
+  .predictive .border { color: #c8dcc1ff; }
+  
+  .success { color: var(--green-accent); }
+  .success .background { color: var(--green-bg); }
+  .success .border { color: var(--green-accent); }
+  
+  .unreachable { color: #58585aff; }
+  .unreachable .background { color: #dcdcddff; }
+  .unreachable .border { color: #c9c9caff; }
+
+  .warning { color: var(--brown-fg); }
+  .warning .background { color: var(--brown-bg); }
+  .warning .border { color: var(--brown-fg); }
+  
+  .panel .overlay_background { color: #ebebecff; }
+  .panel .overlay_hover { color: #DCDCDDFF; }
+  .minimap .thumb .background { color: #383a414c; }
+  .minimap .thumb .hover_background { color: #dfdfe0ff; }
+  .minimap .thumb .border { color: #dfdfe0ff; }
+}
+
+player1 {
+  .cursor { color: var(--blue-accent); }
+  .background { color: var(--blue-accent); }
+  .selection { color: color-mix(in oklch, var(--blue-accent) 25%, var(--text-bg)); }
+}
+
+player2 {
+  .cursor { color: var(--purple-accent); }
+  .background { color: var(--purple-accent); }
+  .selection { color: color-mix(in oklch, var(--purple-accent) 25%, var(--text-bg)); }
+}
+
+player3 {
+  .cursor { color: #ad6e26ff; }
+  .background { color: #ad6e26ff; }
+  .selection { color: #ad6e263d; }
+}
+
+player4 {
+  .cursor { color: #a349abff; }
+  .background { color: #a349abff; }
+  .selection { color: #a349ab3d; }
+}
+
+player5 {
+  .cursor { color: #3a82b7ff; }
+  .background { color: #3a82b7ff; }
+  .selection { color: #3a82b73d; }
+}
+
+player6 {
+  .cursor { color: var(--red-accent); }
+  .background { color: var(--red-accent); }
+  .selection { color: color-mix(in oklch, var(--red-accent) 25%, var(--text-bg)); }
+}
+
+player7 {
+  .cursor { color: #a48819ff; }
+  .background { color: #dec184ff; }
+  .selection { color: #dec1843d; }
+}
+
+player8 {
+  .cursor { color: var(--green-accent); }
+  .background { color: var(--green-accent); }
+  .selection { color: color-mix(in oklch, var(--green-accent) 25%, var(--text-bg)); }
+}
+
+syntax {
+  .comment { color: var(--yellow-fg); background-color: var(--yellow-bg); }
+  .string, .text .literal { color: var(--green-fg); background-color: var(--green-bg); }
+  .string .escape { color: var(--green-fg); background-color: var(--green-bg-dark); }
+  .number, .boolean, .constant { color: var(--purple-fg); }
+  .type .class .definition,
+  .function .definition,
+  .function .special .definition { color: var(--blue-fg); background-color: var(--blue-bg); }
+  .punctuation { color: var(--grey-fg); }
+  .hint { color: var(--grey-fg); background-color: var(--grey-bg); }
+  .predictive { color: var(--grey-fg); font-style: italic; }
+  
+  /* Markdown */
+  .title { color: var(--text-fg); font-weight: 700; }
+  .emphasis { color: var(--text-fg); font-style: italic; }
+  .emphasis .strong { color: var(--text-fg); font-weight: 700; }
+  .link_uri { color: var(--grey-fg); }
+  .embedded { color: var(--text-fg); }
+
+  /* .diff, .patch */
+  .diff .plus { color: var(--green-fg); background-color: var(--green-bg); }
+  .diff .minus { color: var(--red-fg); background-color: var(--red-bg); }
+}

@@ -1,0 +1,8 @@
+[tools]
+node = "22"
+
+[tasks.build]
+description = "Compile CSS sources into the Zed theme"
+run = "npm run build"
+sources = ["src/**/*.css", "scripts/**/*.ts"]
+outputs = ["themes/alabaster.json"]

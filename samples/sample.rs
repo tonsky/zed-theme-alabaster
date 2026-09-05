@@ -83,7 +83,7 @@ fn main() -> Result<()> {
     let double_quoted = "Hello, \u{1F5FA}!";
     let raw_string = r#"This is a "raw" string"#;
     let byte_string = b"byte string";
-    
+
     // Numeric literals
     let integer = 42;
     let float = 3.14;
