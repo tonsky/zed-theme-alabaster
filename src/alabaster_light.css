@@ -27,7 +27,7 @@
   --grey-bg: #00000008;
 
   --blue-fg: #005d7f;
-  --blue-accent: #016ccc;
+  --blue-accent: #1494e4;
   --blue-bg: #d6f2ff;
   
   --red-fg: #dd3f2e;
@@ -202,7 +202,7 @@ style {
 player1 {
   .cursor { color: var(--blue-accent); }
   .background { color: var(--blue-accent); }
-  .selection { color: color-mix(in oklch, var(--blue-accent) 25%, var(--text-bg)); }
+  .selection { color: #b8e1ff; }
 }
 
 player2 {

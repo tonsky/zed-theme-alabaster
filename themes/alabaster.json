@@ -272,7 +272,7 @@
       "style": {
         "border": "#c9c9caff",
         "border.variant": "#dfdfe0ff",
-        "border.focused": "#016cccff",
+        "border.focused": "#1494e4ff",
         "border.selected": "#d6f2ffff",
         "border.transparent": "#00000000",
         "border.disabled": "#d3d3d4ff",
@@ -294,12 +294,12 @@
         "text.muted": "#58585aff",
         "text.placeholder": "#7e8086ff",
         "text.disabled": "#7e8086ff",
-        "text.accent": "#016cccff",
+        "text.accent": "#1494e4ff",
         "icon": "#242529ff",
         "icon.muted": "#58585aff",
         "icon.disabled": "#7e8086ff",
         "icon.placeholder": "#58585aff",
-        "icon.accent": "#016cccff",
+        "icon.accent": "#1494e4ff",
         "status_bar.background": "#dcdcddff",
         "title_bar.background": "#dcdcddff",
         "title_bar.inactive_background": "#ebebecff",
@@ -365,7 +365,7 @@
         "version_control.word_added": "#a6ca98ff",
         "version_control.word_deleted": "#f7a698ff",
         "version_control.deleted": "#dd3f2eff",
-        "version_control.renamed": "#016cccff",
+        "version_control.renamed": "#1494e4ff",
         "version_control.conflict": "#a47501ff",
         "version_control.ignored": "#7e8086ff",
         "created": "#4d9527ff",
@@ -377,9 +377,9 @@
         "deleted": "#dd3f2eff",
         "deleted.background": "#ffe2dcff",
         "deleted.border": "#dd3f2eff",
-        "renamed": "#016cccff",
+        "renamed": "#1494e4ff",
         "renamed.background": "#d6f2ffff",
-        "renamed.border": "#016cccff",
+        "renamed.border": "#1494e4ff",
         "conflict": "#a47501ff",
         "conflict.background": "#faf2e6ff",
         "conflict.border": "#a47501ff",
@@ -417,9 +417,9 @@
         "minimap.thumb.border": "#dfdfe0ff",
         "players": [
           {
-            "cursor": "#016cccff",
-            "background": "#016cccff",
-            "selection": "#c6dbf5ff"
+            "cursor": "#1494e4ff",
+            "background": "#1494e4ff",
+            "selection": "#b8e1ffff"
           },
           {
             "cursor": "#984ea5ff",
