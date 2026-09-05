@@ -1,0 +1,309 @@
+From e0b9c3afd01d30d37732467ed7d885152da1da95 Mon Sep 17 00:00:00 2001
+From: Bret Comnes <166301+bcomnes@users.noreply.github.com>
+Date: Thu, 2 Apr 2026 06:22:35 -0700
+Subject: [PATCH] Add support for `diff.plus` and `diff.minus` highlight
+ captures (#45459)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+- Update diff in highlights.scm to use semantic @diff.plus and
+@diff.minus tokens
+- Add diff.plus, diff.minus tokens to fallback theme
+- Add diff syntax tokens to all official themes (One, Gruvbox, Ayu)
+
+This fixes the issue where diff files showed inverted colors (additions
+in purple/blue, deletions in green) by using proper semantic tokens
+instead of @string and @keyword.
+
+Related discussion in https://github.com/zed-industries/zed/issues/34057
+(thought there might be second issue in that issue)
+
+Release Notes:
+
+- Added support for diff.plus, diff.minus and diff.deleta theme
+selectors in the diff syntax grammar. Previously diff.plus was mapped to
+@string and diff.minus was mapped to @keyword.
+
+*Before:*
+
+<img width="689" height="566" alt="Screenshot 2025-12-20 at 10 58 34 AM"
+src="https://github.com/user-attachments/assets/b7ae4428-2011-4ec2-a803-7e30599e1715"
+/>
+
+*After:*
+
+<img width="659" height="548" alt="Screenshot 2025-12-20 at 10 58 30 AM"
+src="https://github.com/user-attachments/assets/02df31b5-1f1a-40af-adf0-1ac34457cdd4"
+/>
+
+*Before:*
+
+<img width="650" height="545" alt="Screenshot 2025-12-20 at 10 58 16 AM"
+src="https://github.com/user-attachments/assets/78b348bd-1b91-478b-a850-8e526adcfb3c"
+/>
+
+*After:*
+
+<img width="627" height="563" alt="Screenshot 2025-12-20 at 10 58 21 AM"
+src="https://github.com/user-attachments/assets/1176d626-563f-455a-9902-137f646eb8f2"
+/>
+
+*Before:*
+
+<img width="628" height="550" alt="Screenshot 2025-12-20 at 10 58 06 AM"
+src="https://github.com/user-attachments/assets/d819f478-bb2d-4afd-8013-c4e1a2f64dfe"
+/>
+
+*After:*
+
+<img width="643" height="642" alt="Screenshot 2025-12-20 at 10 56 00 AM"
+src="https://github.com/user-attachments/assets/e0f03549-77ed-4a47-b1da-239b519b90f4"
+/>
+
+---------
+
+Co-authored-by: Finn Evers <finn.evers@outlook.de>
+Co-authored-by: MrSubidubi <finn@zed.dev>
+---
+ assets/themes/ayu/ayu.json              | 30 +++++++++++++
+ assets/themes/gruvbox/gruvbox.json      | 60 +++++++++++++++++++++++++
+ assets/themes/one/one.json              | 20 +++++++++
+ crates/grammars/src/diff/highlights.scm |  6 +--
+ crates/theme/src/fallback_themes.rs     |  2 +
+ 5 files changed, 114 insertions(+), 4 deletions(-)
+
+diff --git a/assets/themes/ayu/ayu.json b/assets/themes/ayu/ayu.json
+index 3450e35bf62d78..c62f9eb11238e2 100644
+--- a/assets/themes/ayu/ayu.json
++++ b/assets/themes/ayu/ayu.json
+@@ -391,6 +391,16 @@
+             "color": "#5ac1feff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#aad94cff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#f07178ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -783,6 +793,16 @@
+             "color": "#3b9ee5ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#6cbf43ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#ff6666ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -1175,6 +1195,16 @@
+             "color": "#72cffeff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#aad94cff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#f07178ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+diff --git a/assets/themes/gruvbox/gruvbox.json b/assets/themes/gruvbox/gruvbox.json
+index 16ae188712f7a8..a4fc1b561b3642 100644
+--- a/assets/themes/gruvbox/gruvbox.json
++++ b/assets/themes/gruvbox/gruvbox.json
+@@ -406,6 +406,16 @@
+             "color": "#83a598ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#b8bb26ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#fb4934ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -813,6 +823,16 @@
+             "color": "#83a598ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#b8bb26ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#fb4934ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -1220,6 +1240,16 @@
+             "color": "#83a598ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#b8bb26ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#fb4934ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -1627,6 +1657,16 @@
+             "color": "#0b6678ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#79740eff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#9d0006ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -2034,6 +2074,16 @@
+             "color": "#0b6678ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#79740eff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#9d0006ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -2441,6 +2491,16 @@
+             "color": "#0b6678ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#79740eff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#9d0006ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+diff --git a/assets/themes/one/one.json b/assets/themes/one/one.json
+index 05af3f5cfeec7d..409a5c705c518e 100644
+--- a/assets/themes/one/one.json
++++ b/assets/themes/one/one.json
+@@ -403,6 +403,16 @@
+             "color": "#73ade9ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#98c379ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#e06c75ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -805,6 +815,16 @@
+             "color": "#5b79e3ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#50a14fff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#e45649ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+diff --git a/crates/grammars/src/diff/highlights.scm b/crates/grammars/src/diff/highlights.scm
+index a2e33190f154d6..3c9abbe147b655 100644
+--- a/crates/grammars/src/diff/highlights.scm
++++ b/crates/grammars/src/diff/highlights.scm
+@@ -3,15 +3,13 @@
+ [
+   (addition)
+   (new_file)
+-] @string
++] @string @diff.plus
+ 
+-; TODO: This should eventually be `@diff.plus` with a fallback of `@string`
+ [
+   (deletion)
+   (old_file)
+-] @keyword
++] @keyword @diff.minus
+ 
+-; TODO: This should eventually be `@diff.minus` with a fallback of `@keyword`
+ (commit) @constant
+ 
+ (location) @attribute
+diff --git a/crates/theme/src/fallback_themes.rs b/crates/theme/src/fallback_themes.rs
+index ba7f600fb05cc1..a3831cafff68a3 100644
+--- a/crates/theme/src/fallback_themes.rs
++++ b/crates/theme/src/fallback_themes.rs
+@@ -377,6 +377,8 @@ pub(crate) fn zed_default_dark() -> Theme {
+                 ("variable".into(), HighlightStyle::default()),
+                 ("variable.special".into(), red.into()),
+                 ("variant".into(), HighlightStyle::default()),
++                ("diff.plus".into(), green.into()),
++                ("diff.minus".into(), red.into()),
+             ])),
+         },
+     }

@@ -99,7 +99,7 @@
         "link_text.hover": "#016ccc",
         "version_control.added": "#4d9527",
         "version_control.modified": "#f08c02",
-        "version_control.word_added": "#6AC03F",
+        "version_control.word_added": "#4d9527",
         "version_control.word_deleted": "#D2322D",
         "version_control.deleted": "#dd3f2e",
         "version_control.renamed": "#5c78e2ff",
@@ -204,12 +204,6 @@
             "font_style": null,
             "font_weight": null
           },
-          "comment.doc": {
-            "color": "#6e6600",
-            "background_color": "#fffab4",
-            "font_style": null,
-            "font_weight": null
-          },
 
           "string": {
             "color": "#315d00",
@@ -220,24 +214,6 @@
           "string.escape": {
             "color": "#315d00",
             "background_color": "#D7EDB0",
-            "font_style": null,
-            "font_weight": null
-          },
-          "string.regex": {
-            "color": "#315d00",
-            "background_color": "#ebfcd6",
-            "font_style": null,
-            "font_weight": null
-          },
-          "string.special": {
-            "color": "#315d00",
-            "background_color": "#ebfcd6",
-            "font_style": null,
-            "font_weight": null
-          },
-          "string.special.symbol": {
-            "color": "#315d00",
-            "background_color": "#ebfcd6",
             "font_style": null,
             "font_weight": null
           },
@@ -292,12 +268,14 @@
           },
           
           "diff.plus": {
-            "color": "#6AC03F",
+            "color": "#315d00",
+            "background_color": "#ebfcd6",
             "font_style": null,
             "font_weight": null
           },
           "diff.minus": {
-            "color": "#D2322D",
+            "color": "#dd3f2e",
+            "background_color": "#ffe2dc",
             "font_style": null,
             "font_weight": null
           },

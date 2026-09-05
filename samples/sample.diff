@@ -1,0 +1,234 @@
+diff --git a/assets/themes/ayu/ayu.json b/assets/themes/ayu/ayu.json
+index 3450e35bf62d78..c62f9eb11238e2 100644
+--- a/assets/themes/ayu/ayu.json
++++ b/assets/themes/ayu/ayu.json
+@@ -391,6 +391,16 @@
+             "color": "#5ac1feff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#aad94cff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#f07178ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -783,6 +793,16 @@
+             "color": "#3b9ee5ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#6cbf43ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#ff6666ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -1175,6 +1195,16 @@
+             "color": "#72cffeff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#aad94cff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#f07178ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+diff --git a/assets/themes/gruvbox/gruvbox.json b/assets/themes/gruvbox/gruvbox.json
+index 16ae188712f7a8..a4fc1b561b3642 100644
+--- a/assets/themes/gruvbox/gruvbox.json
++++ b/assets/themes/gruvbox/gruvbox.json
+@@ -406,6 +406,16 @@
+             "color": "#83a598ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#b8bb26ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#fb4934ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -813,6 +823,16 @@
+             "color": "#83a598ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#b8bb26ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#fb4934ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -1220,6 +1240,16 @@
+             "color": "#83a598ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#b8bb26ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#fb4934ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -1627,6 +1657,16 @@
+             "color": "#0b6678ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#79740eff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#9d0006ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -2034,6 +2074,16 @@
+             "color": "#0b6678ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#79740eff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#9d0006ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -2441,6 +2491,16 @@
+             "color": "#0b6678ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#79740eff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#9d0006ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+diff --git a/assets/themes/one/one.json b/assets/themes/one/one.json
+index 05af3f5cfeec7d..409a5c705c518e 100644
+--- a/assets/themes/one/one.json
++++ b/assets/themes/one/one.json
+@@ -403,6 +403,16 @@
+             "color": "#73ade9ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#98c379ff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#e06c75ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+@@ -805,6 +815,16 @@
+             "color": "#5b79e3ff",
+             "font_style": null,
+             "font_weight": null
++          },
++          "diff.plus": {
++            "color": "#50a14fff",
++            "font_style": null,
++            "font_weight": null
++          },
++          "diff.minus": {
++            "color": "#e45649ff",
++            "font_style": null,
++            "font_weight": null
+           }
+         }
+       }
+diff --git a/crates/grammars/src/diff/highlights.scm b/crates/grammars/src/diff/highlights.scm
+index a2e33190f154d6..3c9abbe147b655 100644
+--- a/crates/grammars/src/diff/highlights.scm
++++ b/crates/grammars/src/diff/highlights.scm
+@@ -3,15 +3,13 @@
+ [
+   (addition)
+   (new_file)
+-] @string
++] @string @diff.plus
+ 
+-; TODO: This should eventually be `@diff.plus` with a fallback of `@string`
+ [
+   (deletion)
+   (old_file)
+-] @keyword
++] @keyword @diff.minus
+ 
+-; TODO: This should eventually be `@diff.minus` with a fallback of `@keyword`
+ (commit) @constant
+ 
+ (location) @attribute
+diff --git a/crates/theme/src/fallback_themes.rs b/crates/theme/src/fallback_themes.rs
+index ba7f600fb05cc1..a3831cafff68a3 100644
+--- a/crates/theme/src/fallback_themes.rs
++++ b/crates/theme/src/fallback_themes.rs
+@@ -377,6 +377,8 @@ pub(crate) fn zed_default_dark() -> Theme {
+                 ("variable".into(), HighlightStyle::default()),
+                 ("variable.special".into(), red.into()),
+                 ("variant".into(), HighlightStyle::default()),
++                ("diff.plus".into(), green.into()),
++                ("diff.minus".into(), red.into()),
+             ])),
+         },
+     }
