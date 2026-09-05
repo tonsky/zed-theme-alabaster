@@ -243,7 +243,7 @@ player8 {
 }
 
 syntax {
-  .comment { color: var(--yellow-fg); }
+  .comment, .string .doc { color: var(--yellow-fg); }
   .string, .text .literal { color: var(--green-fg); }
   .string .escape { color: var(--green-fg); background-color: var(--green-bg); }
   .number, .boolean, .constant { color: var(--purple-fg); }

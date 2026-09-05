@@ -198,6 +198,9 @@
           "comment": {
             "color": "#ffee6cff"
           },
+          "string.doc": {
+            "color": "#ffee6cff"
+          },
           "string": {
             "color": "#85cd79ff"
           },
@@ -459,6 +462,10 @@
         ],
         "syntax": {
           "comment": {
+            "color": "#6e6600ff",
+            "background_color": "#fffab4ff"
+          },
+          "string.doc": {
             "color": "#6e6600ff",
             "background_color": "#fffab4ff"
           },

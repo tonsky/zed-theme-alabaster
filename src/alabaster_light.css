@@ -248,7 +248,7 @@ player8 {
 }
 
 syntax {
-  .comment { color: var(--yellow-fg); background-color: var(--yellow-bg); }
+  .comment, .string .doc { color: var(--yellow-fg); background-color: var(--yellow-bg); }
   .string, .text .literal { color: var(--green-fg); background-color: var(--green-bg); }
   .string .escape { color: var(--green-fg); background-color: var(--green-bg-dark); }
   .number, .boolean, .constant { color: var(--purple-fg); }
