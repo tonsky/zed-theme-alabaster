@@ -85,7 +85,7 @@ fn main() -> Result<()> {
     let byte_string = b"byte string";
 
     // Numeric literals
-    let integer = 42;
+    let integer: u32 = -42;
     let float = 3.14;
     let hex = 0xFF;
     let binary = 0b1010;

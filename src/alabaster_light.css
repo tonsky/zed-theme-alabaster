@@ -168,13 +168,13 @@ style {
   .hidden .background { color: #dcdcddff; }
   .hidden .border { color: #d3d3d4ff; }
   
-  .hint { color: var(--blue-accent); }
+  .hint { color: var(--blue-fg); }
   .hint .background { color: var(--blue-bg); }
-  .hint .border { color: var(--blue-accent); }
+  .hint .border { color: var(--blue-fg); }
   
-  .info { color: var(--blue-accent); }
+  .info { color: var(--blue-fg); }
   .info .background { color: var(--blue-bg); }
-  .info .border { color: var(--blue-accent); }
+  .info .border { color: var(--blue-fg); }
   
   .predictive { color: #9b9ec6ff; }
   .predictive .background { color: #dfeadbff; }
