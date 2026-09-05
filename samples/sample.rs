@@ -80,10 +80,10 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 fn main() -> Result<()> {
     // String literals
     let single_quoted = 'A'; // Character literal
-    let double_quoted = "Hello, World!";
+    let double_quoted = "Hello, \u{1F5FA}!";
     let raw_string = r#"This is a "raw" string"#;
     let byte_string = b"byte string";
-
+    
     // Numeric literals
     let integer = 42;
     let float = 3.14;

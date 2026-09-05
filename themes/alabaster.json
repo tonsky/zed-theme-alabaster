@@ -27,7 +27,7 @@
         "ghost_element.active": "#cacacaff",
         "ghost_element.selected": "#cacacaff",
         "ghost_element.disabled": "#ebebecff",
-        "text": "#242529ff",
+        "text": "#000000",
         "text.muted": "#58585aff",
         "text.placeholder": "#7e8086ff",
         "text.disabled": "#7e8086ff",
@@ -97,11 +97,14 @@
         "terminal.ansi.bright_white": "#ffffffff",
         "terminal.ansi.dim_white": "#888888ff",
         "link_text.hover": "#016ccc",
-        "version_control.added": "#6AC03F",
-        "version_control.modified": "#EC8013",
+        "version_control.added": "#4d9527",
+        "version_control.modified": "#f08c02",
         "version_control.word_added": "#6AC03F",
         "version_control.word_deleted": "#D2322D",
-        "version_control.deleted": "#D2322D",
+        "version_control.deleted": "#dd3f2e",
+        "version_control.renamed": "#5c78e2ff",
+        "version_control.conflict": "#a48819ff",
+        "version_control.ignored": "#7e8086ff",
         "conflict": "#a48819ff",
         "conflict.background": "#faf2e6ff",
         "conflict.border": "#f4e7d1ff",
@@ -111,7 +114,7 @@
         "deleted": "#d36151ff",
         "deleted.background": "#fbdfd9ff",
         "deleted.border": "#f6c6bdff",
-        "error": "#F41124",
+        "error": "#dd3f2e",
         "error.background": "#FCDFD9",
         "error.border": "#F8D4D4",
         "hidden": "#7e8086ff",
@@ -126,7 +129,7 @@
         "info": "#016ccc",
         "info.background": "#c6ebff",
         "info.border": "#016ccc",
-        "modified": "#a48819ff",
+        "modified": "#cf9013",
         "modified.background": "#faf2e6ff",
         "modified.border": "#f4e7d1ff",
         "predictive": "#9b9ec6ff",
@@ -135,7 +138,7 @@
         "renamed": "#5c78e2ff",
         "renamed.background": "#e2e2faff",
         "renamed.border": "#cbcdf6ff",
-        "success": "#669f59ff",
+        "success": "#4d9527",
         "success.background": "#dfeadbff",
         "success.border": "#c8dcc1ff",
         "unreachable": "#58585aff",
@@ -144,6 +147,13 @@
         "warning": "#A38819",
         "warning.background": "#faf2e6ff",
         "warning.border": "#f4e7d1ff",
+
+        "panel.overlay_background": "#ebebecff",
+        "panel.overlay_hover": "#DCDCDDFF",
+        "minimap.thumb.background": "#383a414c",
+        "minimap.thumb.hover_background": "#dfdfe0ff",
+        "minimap.thumb.border": "#dfdfe0ff",
+        
         "players": [
           {
             "cursor": "#00c1fa",
@@ -332,15 +342,7 @@
             "font_style": null,
             "font_weight": null
           }
-        },
-        "panel.overlay_background": "#ebebecff",
-        "panel.overlay_hover": "#DCDCDDFF",
-        "minimap.thumb.background": "#383a414c",
-        "minimap.thumb.hover_background": "#dfdfe0ff",
-        "minimap.thumb.border": "#dfdfe0ff",
-        "version_control.renamed": "#5c78e2ff",
-        "version_control.conflict": "#a48819ff",
-        "version_control.ignored": "#7e8086ff"
+        }
       }
     }
   ]
